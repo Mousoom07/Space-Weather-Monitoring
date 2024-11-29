@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Weather Monitoring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <header>
+      <h1>🌌 Space Weather Monitoring 🌌 </h1>
+      <p>Real-Time Solar Activity & Updates</p>
+    </header>
+    <main>
+      <section class="data-grid">
+        <div class="card solar-intensity">
+          <h2>Solar Intensity</h2>
+          <canvas id="solarChart"></canvas>
+        </div>
+        <div class="card solar-wind">
+          <h2>Solar Wind Speed</h2>
+          <p id="solar-wind-speed" class="data-value">Loading... <span>km/s</span></p>
+        </div>
+        <div class="card magnetosphere">
+          <h2>Magnetosphere Disturbance</h2>
+          <p id="magnetosphere" class="data-value">Loading... <span>nT</span></p>
+        </div>
+        <!-- Three dots menu -->
+        <div class="dots-menu">
+          <button id="dotsButton" class="dots-button">⋮</button>
+          <!-- Additional data popup -->
+          <div id="additionalDataPopup" class="additional-data-popup">
+            <ul>
+              <li>Solar Flares: Moderate</li>
+              <li>Cosmic Ray Flux: Low</li>
+              <li>Geomagnetic Storms: Minimal</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Data last updated: <span id="updateTime">Loading...</span></p>
+    </footer>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
